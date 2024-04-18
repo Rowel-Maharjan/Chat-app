@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RealTime Node Socket IO Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/client.js"></script>
 </head>
 <body>
-    <h1>Chat App</h1>
+    <nav>
+        <img class = "logo" src="/image/chat-bubble.png" alt="Image Not Found">
+    </nav>
+
+    <div class="container">
+        <div class="message right">Harry: How are you</div>
+        <div class="message left">Rohan: I am Fine and How about you?</div>
+    </div>
+
+    <div class="send">
+        <form action="#" id="sendMessage">
+            <input type="text" name="messageInp" id="messageInp" placeholder="Enter Message">
+            <button type="submit" class = "btn">Send</button>
+        </form>
+    </div>
 </body>
 </html>
