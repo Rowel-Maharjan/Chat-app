@@ -3,10 +3,16 @@
     margin: 0;
 }
 
+nav{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo{
-    display: block;
-    margin: auto;
-    width: 40px;
+    width: 42px;
 }
 
 body{
@@ -15,6 +21,7 @@ body{
 }
 
 .container{
+    background-color: white;
     border: 2px solid black;
     width: 70vw;
     height: 80vh;
@@ -22,25 +29,43 @@ body{
     overflow-y: auto;
     margin-bottom: 10px;
 }
-.message{
-    background-color: rgb(218, 209, 209);
-    padding: 10px;
-    margin: 10px;
-    width: auto;
+.middle{
+    font-style: italic;
+    display: block;
+    text-align: center;
+    clear: both;
 }
 
 .left{
+    margin: 10px;
     float: left;
     clear: both;
+}
+
+.name{
+    margin:0px 0px 2px 6px;
+    font-size: 14px;
+}
+
+.message-left{
+    padding: 10px;
+    background-color: rgb(132 171 234);
+    width: auto;
     border-radius: 4px;
-    border: 2px solid black;
+
 }
 
 .right{
+    margin: 10px;
     float: right;
     clear: both;
+}
+
+.message-right{
+    background-color: rgb(228, 97, 97);
+    padding: 10px;
+    width: auto;
     border-radius: 4px;
-    border: 2px solid black;
 }
 
 #sendMessage{

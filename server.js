@@ -11,7 +11,7 @@ const io = socketIo(server);
 const PORT = 3000;
 
 server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening on port http://127.0.0.1:${PORT}`);
 });
 
 let user = {}
@@ -23,7 +23,13 @@ io.on('connection', (socket) => {
     socket.on("send", message=>{
         socket.broadcast.emit("receive", {message: message, name: user[socket.id]})
     })
+    socket.on("disconnect", response=>{
+        socket.broadcast.emit("left", user[socket.id])
+        delete user[socket.id];
+    })
 });
+
+
 
 app.use(express.static("public"))
 
